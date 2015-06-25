@@ -1,25 +1,29 @@
 ---
 layout: page
-title: About the Theme
+title: About the author
 tags: [about, Jekyll, theme, responsive]
 modified: 2014-08-08T20:53:07.573882-04:00
 comments: true
 image:
-  feature: sample-image-2.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: kerry.jpg
 ---
 
-Minimal Mistakes is responsive Jekyll theme with large featured images and solid typography. As the name implies the styling is fairly minimal to make it easier for you to build on top of.
+My academic interests include good old fashioned data structures and
+algorithms, algorithms for approximating hard counting problems or
+sampling from intractable probability distributions, representation
+learning (and algorithms for solving the hard non-convex optimisation
+problems this entails), Bayesian machine learning, statistical
+language modelling and extracting information from unstructured data,
+e.g. text.
 
-## Minimal Mistakes is all about:
-
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments -- content first.
-* Optional large feature images for posts and pages.
-* Simple and clear permalink structure.
-* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
-* Support for Disqus Comments
-
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+As an engineer, I like good design, simple abstractions, and clean
+modular implementations. At the moment most of my work is in Scala,
+Java, and Lua (https://github.com/torch/torch7/), but at heart I'm a
+polyglot, with experience in C, C++, Python, Clojure (and a little bit
+of ruby, haskell, and javascript). My interests in efficient
+computation have led me to GPGPU, where I have some experience writing
+both OpenCL (the idealist in me prefers open standards) and CUDA (the
+pragmatist in me acknowledges CUDA is still quite a bit ahead in terms
+of libraries, especially for machine learning). I'm developing a
+fondness for Agile and am a firm believer in Test-Driven Development
+and rapid iteration.

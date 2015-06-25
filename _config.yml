@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title:            Site Title
-locale:           en_US
+title:            PC
+locale:           en_GB
 url:              
 
 
@@ -26,25 +26,24 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
+  name: Paidi Creed
+  avatar: paidi.jpg
+  bio: "Engineer, mathematician, scientist, vegan."
   email: 
   disqus-shortname: 
-  twitter: #username
-  facebook: #username
+  twitter: paidicreed
   google:
-    plus: #username
+    plus: #paidicreed
     analytics: 
     verify: 
     ad-client: 
     ad-slot: 
-  bing-verify: 
-  github: #username
+  bing-verify: #
+  github: paidi
   stackoverflow: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
+  linkedin: paidicreed
   xing: #username
-  instagram: #username
+  instagram: #paidicreed
   lastfm: #username
   tumblr: #username
   pinterest: #username
