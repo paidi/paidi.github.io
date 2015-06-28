@@ -29,9 +29,9 @@ before I got the train back to London.
 
 All the talks were excellent: the organisers (<a
 href="http://homepages.inf.ed.ac.uk/amos/">Amos Storkey</a> and <a
-href="http://homepages.inf.ed.ac.uk/s1060594/">Krzysztof Geras</a>
+href="http://homepages.inf.ed.ac.uk/s1060594/">Krzysztof Geras</a>)
 deserve credit for putting together such a strong program. Here, I'll
-focus on the ones at seem closest to my current interests.
+focus on the ones at seem closest to my current interests. 
 
 #### Deep Gaussian Processes
 
@@ -40,14 +40,14 @@ day with a talk on Deep Gaussian Processes. I've seen Gaussian
 Processes presented a couple of times before and been a little bit
 mystified but this time it felt like it really clicked. Neil motivated
 Deep Gaussian Process Models by starting with a familiar model, the
-multi-layer neural network, and then showing how we arrive at the
-Gaussian Process by placing a prior on the (potentially infinite) set
-of weights and integrating them out to obtain a non-parametric
-probabilistic model. This Bayesian treatment means a Deep Gaussian
-Process is less likely to over-fit (in comparison to most other Deep
-Learning models) and can be trained on relatively small data sets
-(again in contrast with most other Deep Learning models). The Gaussian
-Process model, and hence the complexity, is determined by the
+multi-layer neural network, and then showing how we arrive at the Deep
+Gaussian Process Model by placing a prior on the (potentially
+infinite) set of weights and integrating them out to obtain a
+non-parametric probabilistic model. This Bayesian treatment means a
+Deep Gaussian Process is less likely to over-fit (in comparison to
+most other Deep Learning models) and can be trained on relatively
+small data sets (again in contrast with most other Deep Learning
+models). The Gaussian Process model complexity is determined by the
 covariance matrix of the input, resulting in training time \\( O(n^3)
 \\) and prediction time \\( O(n^2) \\). This is clearly impractical
 for large datasets and Neil and others have worked to reduce this. A
