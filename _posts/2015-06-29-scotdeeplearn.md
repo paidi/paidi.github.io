@@ -214,7 +214,7 @@ equips a recurrent neural network with a separate memory so it can
 learn to perform complex sequential tasks (that a LSTM is currently
 not able to handle). In his own words, Alex spent years trying to
 train LSTMs and to convince people that they were the right model for
-NLP and now that they have seen widespread adoption, he's moving on to
+NLP and now that they have seen widespread adoption he's moving on to
 the next thing. ThThis model feels a bit complicated right now, with
 many moving parts, and there are an increasing number of papers
 appearing that try to develop simpler ways to equip a neural network
