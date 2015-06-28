@@ -30,8 +30,9 @@ before I got the train back to London.
 All the talks were excellent: the organisers (<a
 href="http://homepages.inf.ed.ac.uk/amos/">Amos Storkey</a> and <a
 href="http://homepages.inf.ed.ac.uk/s1060594/">Krzysztof Geras</a>)
-deserve credit for putting together such a strong program. Here, I'll
-focus on the ones that seem closest to my current interests.
+deserve credit for putting together such a strong program. I seem to
+have more notes for the talks which are closer to my own
+interests, so go into more details on those in the summaries below.
 
 #### Deep Gaussian Processes
 
@@ -76,7 +77,8 @@ question! One of the big problems encountered when training models
 like this is a lack of large sets of good training data. To get around
 this, Blunsom et al. have synthesised a data set by scraping articles
 from CNN and the Daily Mail. Each article is paired with a number of
-summary sentences and these are transformed into *Cloze* questions by
+summary sentences and these are transformed into <a
+href="https://en.wikipedia.org/wiki/Cloze_test">Cloze</a> questions by
 removing a single entity from the summary sentence and asking the
 model to identify the missing entity. To make the task as hard as
 possible, the entities are anonymised so that each entity is replaced
@@ -88,7 +90,7 @@ Mail article there is a very high probability that X=cancer.
 
 The model they used seemed quite novel to me, combining a
 bidirectional Long Short Term Memory (LSTM) recurrent neural network
-with an attention mechanism that was effective at extracting the
+with an attention mechanism that is effective at extracting the
 relevant words from a large document. A single-layer bidirectional
 LSTM is used to compute a vector for the query, \\( v_Q \\), and to
 compute a vector for each word in the document. The so-called
@@ -169,21 +171,7 @@ constraints up front and then train the best neural network that fits
 within those constraints. Paper <a
 href="http://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep">here</a>
 
-#### The Rest
-
-<a href="http://homepages.inf.ed.ac.uk/imurray2/">Iain Murray</a>
-spoke about applications of density estimation to cosmology, yet
-another case of ML trying to come in and trump all existing methods
-for a computational problem in another field. One interesting aside in
-this talk was in regard to the use of RBMs to generate features for
-supervised learning. Iain developed a method for estimating the
-quality of the density estimation achieved by an RBM and ranked three
-different models according to how well they estimated the underlying
-data distribution. He then used the RBMs to construct features for a
-classification problem and ranked the models according to the accuracy
-of the classifier. Surprisingly, the ranking was reversed, i.e. the
-better a model was at capturing the underlying data distribution the
-worse the accuracy of the classifier.
+#### Acoustic Model Adaptation
 
 <a href="http://homepages.inf.ed.ac.uk/s1136550/">Pawel
 Swietojanski</a> gave a talk on adapting neural models to the speaker
@@ -194,8 +182,31 @@ own specific style that the model needs to capture and combine with a
 model trained on the wider background data. This used to be a very
 hard thing to get right but it seems that the flexibility of neural
 networks are well-suited to this kind of problem, as demonstrated by
-the work Pawel presented here.
+the work Pawel presented here. I'm not 100% sure but I think <a
+href="http://www.cstr.ed.ac.uk/publications/users/s1136550_abstracts.html#Swietojanski2014_lhuc">this</a>
+is the relevant paper.
 
+#### Deep Density Estimation and Scientific Reasoning
+
+<a href="http://homepages.inf.ed.ac.uk/imurray2/">Iain Murray</a>
+spoke about his work on density estimation, including a cool
+application to cosmology, in what looks like another case of ML and
+trumping the existing methods for a computational problem in another
+field. One interesting aside in this talk was in regard to the use of
+RBMs to generate features for supervised learning. Iain developed a
+method for estimating the quality of the density estimation achieved
+by an RBM and ranked three different models according to how well they
+estimated the underlying data distribution. He then used the RBMs to
+construct features for a classification problem and ranked the models
+according to the accuracy of the classifier. Surprisingly, the ranking
+was reversed, i.e. the better a model was at capturing the underlying
+data distribution the worse the accuracy of the classifier. I couldn't
+find a reference for this fact, but the latest paper in a line of
+interesting looking work on density estimation by Murray and his
+co-authors can be found <a
+href="http://homepages.inf.ed.ac.uk/imurray2/pub/15made/">here</a>
+
+#### Deep Spiking Networks
 <a href="https://www.ini.uzh.ch/people/pfeiffer">Michael Pfeiffer</a>
 gave a talk on Deep Spiking Networks. My computational neuroscience
 background is too sparse to be able to make an informed assessment of
@@ -208,6 +219,7 @@ used to get deep neural networks onto embedded devices.... Much like
 what's inside our heads is a special-purpose "wetware" implementation
 for our very own embedded device!
 
+#### Neural Turing Machines
 <a href="http://www.cs.toronto.edu/~graves/">Alex Graves</a> finished
 the day with his work on the Neural Turing Machine, a model that
 equips a recurrent neural network with a separate memory so it can
@@ -215,10 +227,12 @@ learn to perform complex sequential tasks (that a LSTM is currently
 not able to handle). In his own words, Alex spent years trying to
 train LSTMs and to convince people that they were the right model for
 NLP and now that they have seen widespread adoption he's moving on to
-the next thing. ThThis model feels a bit complicated right now, with
+the next thing. This model feels a bit complicated right now, with
 many moving parts, and there are an increasing number of papers
 appearing that try to develop simpler ways to equip a neural network
 with an external memory. I don't think these models are truly
 practical yet but it's certainly one of the more interesting and
 ambitious lines of research in machine learning and one worth keeping
-up with. Paper <a href="http://arxiv.org/abs/1410.5401">here</a>
+up with. Paper <a href="http://arxiv.org/abs/1410.5401">here</a> (see
+also <a href="http://arxiv.org/abs/1506.02516">Grefenstette et
+al.</a>)
