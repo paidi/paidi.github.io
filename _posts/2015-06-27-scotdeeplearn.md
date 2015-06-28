@@ -27,61 +27,64 @@ before I got the train back to London.
 
 ### The Talks
 
-All the talks were excellent: the organisers deserve credit for
-putting together such a strong program. Here, I'll focus on the ones
-that seem closest to my current interests.
+All the talks were excellent: the organisers (<a
+href="http://homepages.inf.ed.ac.uk/amos/">Amos Storkey</a> and <a
+href="http://homepages.inf.ed.ac.uk/s1060594/">Krzysztof Geras</a>
+deserve credit for putting together such a strong program. Here, I'll
+focus on the ones at seem closest to my current interests.
 
 #### Deep Gaussian Processes
 
-Neil Lawrence started the day with a talk on Deep Gaussian
-Processes. I've seen Gaussian Processes presented a couple of times
-before and been a little bit mystified but this time it felt like it
-really clicked. Neil motivated Deep Gaussian Process Models by
-starting with a familiar model, the multi-layer neural network, and
-then showing how we arrive at the Gaussian Process by placing a prior
-on the (potentially infinite) set of weights and integrating them out
-to obtain a non-parametric probabilistic model. This Bayesian
-treatment means a Deep Gaussian Process is less likely to over-fit (in
-comparison to most other Deep Learning models) and can be trained on
-relatively small data sets (again in contrast with most other Deep
-Learning models). The Gaussian Process model, and hence the
-complexity, is determined by the covariance matrix of the input,
-resulting in training time \\( O(n^3) \\) and prediction time \\(
-O(n^2) \\). This is clearly impractical for large datasets and Neil
-and others have worked to reduce this. A variational approximation to
-the log-likelihood (which is somehow analogous to taking a low rank
-approximation to the covariance matrix) can reduce the complexities to
-\\( O(nm^2) \\) and \\( O(nm) \\), where \\( m \\) is the number of
-inducing variables used in the approximation. Deep generative models
-have been gaining a lot of traction recently, particularly as people
-try to tackle problems where there isn't an abundance of labelled
-training data, and it feels like Deep Gassian Processes are a valid
-alternative to the approaches based on Deep Neural Networks (e.g. <a
+<a href="http://inverseprobability.com/">Neil Lawrence</a> started the
+day with a talk on Deep Gaussian Processes. I've seen Gaussian
+Processes presented a couple of times before and been a little bit
+mystified but this time it felt like it really clicked. Neil motivated
+Deep Gaussian Process Models by starting with a familiar model, the
+multi-layer neural network, and then showing how we arrive at the
+Gaussian Process by placing a prior on the (potentially infinite) set
+of weights and integrating them out to obtain a non-parametric
+probabilistic model. This Bayesian treatment means a Deep Gaussian
+Process is less likely to over-fit (in comparison to most other Deep
+Learning models) and can be trained on relatively small data sets
+(again in contrast with most other Deep Learning models). The Gaussian
+Process model, and hence the complexity, is determined by the
+covariance matrix of the input, resulting in training time \\( O(n^3)
+\\) and prediction time \\( O(n^2) \\). This is clearly impractical
+for large datasets and Neil and others have worked to reduce this. A
+variational approximation to the log-likelihood (which is somehow
+analogous to taking a low rank approximation to the covariance matrix)
+can reduce the complexities to \\( O(nm^2) \\) and \\( O(nm) \\),
+where \\( m \\) is the number of inducing variables used in the
+approximation. Deep generative models have been gaining a lot of
+traction recently, particularly as people try to tackle problems where
+there isn't an abundance of labelled training data, and it feels like
+Deep Gassian Processes could be a valid alternative to the approaches
+based on Deep Neural Networks (e.g. <a
 href="http://papers.nips.cc/paper/5352-semi-supervised-learning-with-deep-generative-models">Kingma
-et al</a>). This is a topic which I am only just getting interested
-in myself, but definitely something that feels worthy of further study.
+et al</a>). This is a topic which I am only just getting interested in
+myself, but definitely something that feels worthy of further study.
 Paper <a
 href="http://jmlr.org/proceedings/papers/v31/damianou13a.html">here</a>
 
 #### Teaching Machines to Read and Comprehend
 
-Next up, Phil Blunsom described efforts at Google DeepMind to build
-models for machine reading: the model "reads" a question and a
-document which contains the answer to the question and is then able to
-answer the question! One of the big problems encountered when training
-models like this is a lack of large sets of good training data. To get
-around this, Blunsom et al. have synthesised a data set by scraping
-articles from CNN and the Daily Mail. Each article is paired with a
-number of summary sentences and these are transformed into *Cloze*
-questions by removing a single entity from the summary sentence and
-asking the model to identify the missing entity. To make the task as
-hard as possible, the entities are anonymised so that each entity is
-replaced by a random string consistent within a single document-query
-pair, but varying across different documents.  This ensures the
-performance of the model on the task is not connected with it learning
-background information about the corpus, e.g. when "cures X" appears
-in a Daily Mail article there is a very high probability that
-X=cancer.
+Next up, <a href="https://www.cs.ox.ac.uk/people/phil.blunsom/">Phil
+Blunsom</a> described efforts at Google DeepMind to build models for
+machine reading: the model "reads" a question and a document which
+contains the answer to the question and is then able to answer the
+question! One of the big problems encountered when training models
+like this is a lack of large sets of good training data. To get around
+this, Blunsom et al. have synthesised a data set by scraping articles
+from CNN and the Daily Mail. Each article is paired with a number of
+summary sentences and these are transformed into *Cloze* questions by
+removing a single entity from the summary sentence and asking the
+model to identify the missing entity. To make the task as hard as
+possible, the entities are anonymised so that each entity is replaced
+by a random string consistent within a single document-query pair, but
+varying across different documents.  This ensures the performance of
+the model on the task is not connected with it learning background
+information about the corpus, e.g. when "cures X" appears in a Daily
+Mail article there is a very high probability that X=cancer.
 
 The model they used seemed quite novel to me, combining a
 bidirectional LSTM recurrent neural network with an attention
@@ -105,21 +108,21 @@ http://arxiv.org/abs/1506.03340">here</a>
 
 #### Do Deep Networks Really Need to be Deep?
 
-After lunch, Rich Caruana spoke about the surprising phenomenon where
-one can train a shallow network to match the performance of a deep
-network. The motivation for this work is the fact that we know the
-single layer neural network is a universal approximator, so it should
-be sufficient to learn any discriminative function or class
-probability distribution for a labelled data set. Despite this
-theoretical result, in pretty much every real problem a deep neural
-network has out-performed all shallow networks. This could be for a
-number of reasons that people don't fully understand but one
-conjecture seems to be that we are better at regularising deep
-networks so can avoid over-fitting to the data distribution as we
-increase the number of parameters to better approximate it. Rich
-Caruana (and others including Geoff Hinton) have observed that for
-several well-known benchmarks we can train a shallow network to mimic
-a deep network and get similar (and sometimes better)
+After lunch, <a href="http://www.cs.cornell.edu/~caruana/">Rich
+Caruana</a> spoke about the surprising phenomenon where one can train
+a shallow network to match the performance of a deep network. The
+motivation for this work is the fact that we know the single layer
+neural network is a universal approximator, so it should be sufficient
+to learn any discriminative function or class probability distribution
+for a labelled data set. Despite this theoretical result, in pretty
+much every real problem a deep neural network has out-performed all
+shallow networks. This could be for a number of reasons that people
+don't fully understand but one conjecture seems to be that we are
+better at regularising deep networks so can avoid over-fitting to the
+data distribution as we increase the number of parameters to better
+approximate it. Rich Caruana (and others including Geoff Hinton) have
+observed that for several well-known benchmarks we can train a shallow
+network to mimic a deep network and get similar (and sometimes better)
 results. Moreover, in each of these cases just training a shallow
 network on the data is not sufficient: people have only been able to
 obtain comparable results when the shallow network is trained to mimic
@@ -168,46 +171,54 @@ href="http://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep">here
 
 #### The Rest
 
-Iain Murray spoke about applications of density estimation to
-cosmology, yet another case of ML trying to come in and trump all
-existing methods for a computational problem in another field. One
-interesting aside in this talk was in regard to the use of RBMs to
-generate features for supervised learning. Iain developed a method for
-estimating the quality of the density estimation achieved by an RBM
-and ranked three different models according to how well they estimated
-the underlying data distribution. He then used the RBMs to construct
-features for a classification problem and ranked the models according
-to the accuracy of the classifier. Surprisingly, the ranking was
-reversed, i.e. the better a model was at capturing the underlying data
-distribution the worse the accuracy of the classifier.
+<a href="http://homepages.inf.ed.ac.uk/imurray2/">Iain Murray</a>
+spoke about applications of density estimation to cosmology, yet
+another case of ML trying to come in and trump all existing methods
+for a computational problem in another field. One interesting aside in
+this talk was in regard to the use of RBMs to generate features for
+supervised learning. Iain developed a method for estimating the
+quality of the density estimation achieved by an RBM and ranked three
+different models according to how well they estimated the underlying
+data distribution. He then used the RBMs to construct features for a
+classification problem and ranked the models according to the accuracy
+of the classifier. Surprisingly, the ranking was reversed, i.e. the
+better a model was at capturing the underlying data distribution the
+worse the accuracy of the classifier.
 
-Pawel Swietojanski on adapting neural models to the speaker for speech
-recognition problems, a subject which resonates with me from my
-SwiftKey days. One of the challenges of things like speech recognition
-or next word prediction is that each user will have their own specific
-style that the model needs to capture and combine with a model trained
-on the wider background data. This used to be a very hard thing to get
-right but it seems that the flexibility of neural networks are
-well-suited to this kind of problem. 
+<a href="http://homepages.inf.ed.ac.uk/s1136550/">Pawel
+Swietojanski</a> gave a talk on adapting neural models to the speaker
+for speech recognition problems, a subject which resonates with me
+from my SwiftKey days. One of the challenges of things like speech
+recognition or next word prediction is that each user will have their
+own specific style that the model needs to capture and combine with a
+model trained on the wider background data. This used to be a very
+hard thing to get right but it seems that the flexibility of neural
+networks are well-suited to this kind of problem, as demonstrated by
+Pawel's work.
 
-Michael Pfeiffer gave a talk on Deep Spiking Networks. My
-computational neuroscience background is too sparse to be able to make
-an informed assessment of this last talk, but for me the take home
-message was that this type of model can be implemented asynchronously,
-on special hardware, and can smoothly trade-off running time against
-prediction quality. This means that as well as being more biologically
-plausible models of the brain, they also give rise to special-purpose
-implementations which can be used to get deep neural networks onto
-embedded devices.... Much like what's inside our heads is a
-special-purpose "wetware" implementation for our very own embedded
-device!
+<a href="https://www.ini.uzh.ch/people/pfeiffer">Michael Pfeiffer</a>
+gave a talk on Deep Spiking Networks. My computational neuroscience
+background is too sparse to be able to make an informed assessment of
+this last talk, but for me the take home message was that this type of
+model can be implemented asynchronously, on special hardware, and can
+smoothly trade-off running time against prediction quality. This means
+that as well as being more biologically plausible models of the brain,
+they also give rise to special-purpose implementations which can be
+used to get deep neural networks onto embedded devices.... Much like
+what's inside our heads is a special-purpose "wetware" implementation
+for our very own embedded device!
 
-Alex Graves finished the day with his work on the Neural Turing
-Machine, a complicated model that equips a recurrent model with a
-separate memory so it can learn to perform complex sequential
-tasks. This model feels a bit complicated right now, with many
-moving parts, and there are an increasing number of papers appearing
-that try to develop simpler ways to equip a neural network with an
-external memory. I don't think these models are truly practical yet
-but it's certainly one of the more interesting and ambitious lines of
-research in machine learning and one worth keeping up with.
+<a href="http://www.cs.toronto.edu/~graves/">Alex Graves</a> finished
+the day with his work on the Neural Turing Machine, a complicated
+model that equips a recurrent model with a separate memory so it can
+learn to perform complex sequential tasks. In his own words, Alex
+spent years trying to train LSTMs and to convince people that they
+were the right model for NLP and now that they have seen widespread
+adoption, he's moving on to the next thing. This model feels a bit
+complicated right now, with many moving parts, and there are an
+increasing number of papers appearing that try to develop simpler ways
+to equip a neural network with an external memory. I don't think these
+models are truly practical yet but it's certainly one of the more
+interesting and ambitious lines of research in machine learning and
+one worth keeping up with. Paper <a
+href="http://arxiv.org/abs/1410.5401">here</a>
