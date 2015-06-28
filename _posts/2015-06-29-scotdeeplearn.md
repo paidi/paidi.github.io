@@ -2,9 +2,9 @@
 layout: post
 title: "Scottish Deep Learning Workshop 2015"
 excerpt: "Summary of talks from the Second Scottish Deep Learning Workshop."
-tags: [deep learning, academic]
+tags: [machine learning, academic]
 comments: true
-published: true
+published: false
 ---
 
 Earlier this month, I took a trip to Edinburgh to attend the <a
@@ -31,7 +31,7 @@ All the talks were excellent: the organisers (<a
 href="http://homepages.inf.ed.ac.uk/amos/">Amos Storkey</a> and <a
 href="http://homepages.inf.ed.ac.uk/s1060594/">Krzysztof Geras</a>)
 deserve credit for putting together such a strong program. Here, I'll
-focus on the ones at seem closest to my current interests. 
+focus on the ones that seem closest to my current interests.
 
 #### Deep Gaussian Processes
 
@@ -101,8 +101,8 @@ model is able to outperform a deep LSTM, suggesting that determining
 the relevant words in a document (via the attention mechanism) could
 be more important than constructing higher-level features. There has
 been a lot of recent work on the problem of computing a feature vector
-for a document *D* that can then be used to answer queries about the
-contents of *D* and this seems (to me) to be the most flexible
+for a document *D* that can then be used to answer a query about the
+contents of *D*x and this seems (to me) to be the most flexible
 approach so far.  Paper <a href="here
 http://arxiv.org/abs/1506.03340">here</a>
 
@@ -194,7 +194,7 @@ own specific style that the model needs to capture and combine with a
 model trained on the wider background data. This used to be a very
 hard thing to get right but it seems that the flexibility of neural
 networks are well-suited to this kind of problem, as demonstrated by
-Pawel's work.
+the work Pawel presented here.
 
 <a href="https://www.ini.uzh.ch/people/pfeiffer">Michael Pfeiffer</a>
 gave a talk on Deep Spiking Networks. My computational neuroscience
