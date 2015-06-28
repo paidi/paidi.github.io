@@ -4,7 +4,7 @@ title: "Scottish Deep Learning Workshop 2015"
 excerpt: "Summary of talks from the Second Scottish Deep Learning Workshop."
 tags: [machine learning, academic]
 comments: true
-published: true
+published: false
 ---
 
 Earlier this month, I took a trip to Edinburgh to attend the <a
@@ -238,12 +238,19 @@ learn to perform complex sequential tasks (that a LSTM is currently
 not able to handle). In his own words, Alex spent years trying to
 train LSTMs and to convince people that they were the right model for
 NLP and now that they have seen widespread adoption he's moving on to
-the model he believes will provide the next breakthroughs. This model
-feels a bit complicated right now and there are an increasing number
-of papers appearing that try to develop simpler ways to equip a neural
-network with an external memory. I don't think these models are truly
-practical yet but it's certainly one of the more interesting and
-ambitious lines of research in machine learning and one worth keeping
-up with. Paper <a href="http://arxiv.org/abs/1410.5401">here</a> (see
-also <a href="http://arxiv.org/abs/1506.02516">Grefenstette et
-al.</a>)
+the model he believes will provide the next breakthroughs. It is still
+very much early days but already this model has been used to obtain
+some impressive results, learning simple sequential algorithms like
+copying and sorting lists of arbitrary lengths after being shown a
+finite set of examples. In contrast, a LSTM struggles to handle
+sequences that are longer than those that were seen during
+training.
+
+This model feels a bit complicated right now and there are an
+increasing number of papers appearing that try to develop simpler ways
+to equip a neural network with an external memory. I don't think these
+models are truly practical yet but it's certainly one of the more
+interesting and ambitious lines of research in machine learning and
+one worth keeping up with. Paper <a
+href="http://arxiv.org/abs/1410.5401">here</a> (see also <a
+href="http://arxiv.org/abs/1506.02516">Grefenstette et al.</a>)
