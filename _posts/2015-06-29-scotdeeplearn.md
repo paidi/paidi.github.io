@@ -4,7 +4,7 @@ title: "Scottish Deep Learning Workshop 2015"
 excerpt: "Summary of talks from the Second Scottish Deep Learning Workshop."
 tags: [machine learning, academic]
 comments: true
-published: false
+published: true
 ---
 
 Earlier this month, I took a trip to Edinburgh to attend the <a
@@ -87,23 +87,23 @@ information about the corpus, e.g. when "cures X" appears in a Daily
 Mail article there is a very high probability that X=cancer.
 
 The model they used seemed quite novel to me, combining a
-bidirectional LSTM recurrent neural network with an attention
-mechanism that was effective at extracting the relevant words from a
-large document. A single-layer bidirectional LSTM is used to compute a
-vector for the query, \\( v_Q \\), and to compute a vector for each
-word in the document. The so-called attention mechanism is used to
-assign a weight to each word in the document based on its relevance to
-the query, which are then used to construct a vector representation
-for the document, \\( v_D \\), as a weighted sum of word
-vectors. Finally, \\( v_D \\) and \\( v_Q \\) are used to compute the
-answer to the query. Even though it only has a single layer, this
-model is able to outperform a deep LSTM, suggesting that determining
-the relevant words in a document (via the attention mechanism) could
-be more important than constructing higher-level features. There has
-been a lot of recent work on the problem of computing a feature vector
-for a document *D* that can then be used to answer a query about the
-contents of *D*x and this seems (to me) to be the most flexible
-approach so far.  Paper <a href="here
+bidirectional Long Short Term Memory (LSTM) recurrent neural network
+with an attention mechanism that was effective at extracting the
+relevant words from a large document. A single-layer bidirectional
+LSTM is used to compute a vector for the query, \\( v_Q \\), and to
+compute a vector for each word in the document. The so-called
+attention mechanism is used to assign a weight to each word in the
+document based on its relevance to the query, which are then used to
+construct a vector representation for the document, \\( v_D \\), as a
+weighted sum of word vectors. Finally, \\( v_D \\) and \\( v_Q \\) are
+used to compute the answer to the query. Even though it only has a
+single layer, this model is able to outperform a deep LSTM, suggesting
+that determining the relevant words in a document (via the attention
+mechanism) could be more important than constructing higher-level
+features. There has been a lot of recent work on the problem of
+computing a feature vector for a document *D* that can then be used to
+answer a query about the contents of *D*x and this seems (to me) to be
+the most flexible approach so far.  Paper <a href="here
 http://arxiv.org/abs/1506.03340">here</a>
 
 #### Do Deep Networks Really Need to be Deep?
@@ -209,16 +209,16 @@ what's inside our heads is a special-purpose "wetware" implementation
 for our very own embedded device!
 
 <a href="http://www.cs.toronto.edu/~graves/">Alex Graves</a> finished
-the day with his work on the Neural Turing Machine, a complicated
-model that equips a recurrent model with a separate memory so it can
-learn to perform complex sequential tasks. In his own words, Alex
-spent years trying to train LSTMs and to convince people that they
-were the right model for NLP and now that they have seen widespread
-adoption, he's moving on to the next thing. This model feels a bit
-complicated right now, with many moving parts, and there are an
-increasing number of papers appearing that try to develop simpler ways
-to equip a neural network with an external memory. I don't think these
-models are truly practical yet but it's certainly one of the more
-interesting and ambitious lines of research in machine learning and
-one worth keeping up with. Paper <a
-href="http://arxiv.org/abs/1410.5401">here</a>
+the day with his work on the Neural Turing Machine, a model that
+equips a recurrent neural network with a separate memory so it can
+learn to perform complex sequential tasks (that a LSTM is currently
+not able to handle). In his own words, Alex spent years trying to
+train LSTMs and to convince people that they were the right model for
+NLP and now that they have seen widespread adoption, he's moving on to
+the next thing. ThThis model feels a bit complicated right now, with
+many moving parts, and there are an increasing number of papers
+appearing that try to develop simpler ways to equip a neural network
+with an external memory. I don't think these models are truly
+practical yet but it's certainly one of the more interesting and
+ambitious lines of research in machine learning and one worth keeping
+up with. Paper <a href="http://arxiv.org/abs/1410.5401">here</a>
