@@ -31,8 +31,10 @@ All the talks were excellent: the organisers (<a
 href="http://homepages.inf.ed.ac.uk/amos/">Amos Storkey</a> and <a
 href="http://homepages.inf.ed.ac.uk/s1060594/">Krzysztof Geras</a>)
 deserve credit for putting together such a strong program. I seem to
-have more notes for the talks which are closer to my own
-interests, so go into more details on those in the summaries below.
+have more notes for the talks which are closer to my own interests, so
+go into more details on those in the summaries below. Any errors in
+what I have written below are most likely my own, and not the fault of
+the speakers.
 
 #### Deep Gaussian Processes
 
@@ -48,19 +50,28 @@ non-parametric probabilistic model. This Bayesian treatment means a
 Deep Gaussian Process is less likely to over-fit (in comparison to
 most other Deep Learning models) and can be trained on relatively
 small data sets (again in contrast with most other Deep Learning
-models). The Gaussian Process model complexity is determined by the
-covariance matrix of the input, resulting in training time \\( O(n^3)
-\\) and prediction time \\( O(n^2) \\). This is clearly impractical
-for large datasets and Neil and others have worked to reduce this. A
-variational approximation to the log-likelihood (which is somehow
-analogous to taking a low rank approximation to the covariance matrix)
-can reduce the complexities to \\( O(nm^2) \\) and \\( O(nm) \\),
-where \\( m \\) is the number of inducing variables used in the
-approximation. Deep generative models have been gaining a lot of
-traction recently, particularly as people try to tackle problems where
-there isn't an abundance of labelled training data, and it feels like
-Deep Gassian Processes could be a valid alternative to the approaches
-based on Deep Neural Networks (e.g. <a
+models).
+
+The Gaussian Process model complexity is determined by the covariance
+matrix of the input, resulting in training time \\( O(n^3) \\) and
+prediction time \\( O(n^2) \\). This is clearly impractical for large
+datasets and Neil and others have worked to reduce this. A variational
+approximation to the log-likelihood (which is somehow analogous to
+taking a low rank approximation to the covariance matrix) can reduce
+the complexities to \\( O(nm^2) \\) and \\( O(nm) \\), where \\( m \\)
+is the number of inducing variables used in the approximation. This
+variational bound can be applied to each term in the sum obtained when
+we take the log-likelihood of a Deep Gaussian Process, giving a
+variational lower bound for the deep version of the model. The quality
+of the approximation gets worse as the number of layers are increased,
+but it seems the extra strength of the deeper model compensates for
+this.
+
+Deep generative models have been gaining a lot of traction recently,
+particularly as people try to tackle problems where there isn't an
+abundance of labelled training data, and it feels like Deep Gassian
+Processes could be a valid alternative to the approaches based on Deep
+Neural Networks (e.g. <a
 href="http://papers.nips.cc/paper/5352-semi-supervised-learning-with-deep-generative-models">Kingma
 et al</a>). This is a topic which I am only just getting interested in
 myself, but definitely something that feels worthy of further study.
@@ -103,8 +114,8 @@ single layer, this model is able to outperform a deep LSTM, suggesting
 that determining the relevant words in a document (via the attention
 mechanism) could be more important than constructing higher-level
 features. There has been a lot of recent work on the problem of
-computing a feature vector for a document *D* that can then be used to
-answer a query about the contents of *D*x and this seems (to me) to be
+computing a feature vector for a document *D* that can be used to
+answer a query about the contents of *D* and this seems (to me) to be
 the most flexible approach so far.  Paper <a href="here
 http://arxiv.org/abs/1506.03340">here</a>
 
@@ -201,12 +212,13 @@ construct features for a classification problem and ranked the models
 according to the accuracy of the classifier. Surprisingly, the ranking
 was reversed, i.e. the better a model was at capturing the underlying
 data distribution the worse the accuracy of the classifier. I couldn't
-find a reference for this fact, but the latest paper in a line of
+find a reference for this, but the latest paper in a line of
 interesting looking work on density estimation by Murray and his
 co-authors can be found <a
 href="http://homepages.inf.ed.ac.uk/imurray2/pub/15made/">here</a>
 
 #### Deep Spiking Networks
+
 <a href="https://www.ini.uzh.ch/people/pfeiffer">Michael Pfeiffer</a>
 gave a talk on Deep Spiking Networks. My computational neuroscience
 background is too sparse to be able to make an informed assessment of
@@ -220,6 +232,7 @@ what's inside our heads is a special-purpose "wetware" implementation
 for our very own embedded device!
 
 #### Neural Turing Machines
+
 <a href="http://www.cs.toronto.edu/~graves/">Alex Graves</a> finished
 the day with his work on the Neural Turing Machine, a model that
 equips a recurrent neural network with a separate memory so it can
@@ -227,10 +240,11 @@ learn to perform complex sequential tasks (that a LSTM is currently
 not able to handle). In his own words, Alex spent years trying to
 train LSTMs and to convince people that they were the right model for
 NLP and now that they have seen widespread adoption he's moving on to
-the next thing. This model feels a bit complicated right now, with
-many moving parts, and there are an increasing number of papers
-appearing that try to develop simpler ways to equip a neural network
-with an external memory. I don't think these models are truly
+the model he believes will provide the next breakthroughs in
+sequential learning problems. This model feels a bit complicated right
+now, with many moving parts, and there are an increasing number of
+papers appearing that try to develop simpler ways to equip a neural
+network with an external memory. I don't think these models are truly
 practical yet but it's certainly one of the more interesting and
 ambitious lines of research in machine learning and one worth keeping
 up with. Paper <a href="http://arxiv.org/abs/1410.5401">here</a> (see
