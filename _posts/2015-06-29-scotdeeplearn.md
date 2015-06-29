@@ -248,8 +248,8 @@ training.
 
 This model feels a bit complicated right now and several other groups
 of researchers have tried to develop simpler ways to equip a neural
-network with an external memory. I don't know if models are truly
-practical yet but it's certainly one of the more interesting and
+network with an external memory. I don't know if these models are
+truly practical yet but it's certainly one of the more interesting and
 ambitious lines of research in machine learning and one worth keeping
 up with. Paper <a href="http://arxiv.org/abs/1410.5401">here</a> (see
 also <a href="http://arxiv.org/abs/1506.02516">Grefenstette et
