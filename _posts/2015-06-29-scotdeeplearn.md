@@ -4,7 +4,7 @@ title: "Scottish Deep Learning Workshop 2015"
 excerpt: "Summary of talks from the Second Scottish Deep Learning Workshop."
 tags: [machine learning, academic]
 comments: true
-published: false
+published: true
 ---
 
 Earlier this month, I took a trip to Edinburgh to attend the <a
@@ -64,8 +64,8 @@ variational bound can be applied to each term in the sum obtained when
 we take the log-likelihood of a Deep Gaussian Process, giving a
 variational lower bound for the deep version of the model. The quality
 of the approximation gets worse as the number of layers are increased,
-but it seems the extra strength of the deeper model compensates for
-this.
+but it seems the improvements gained by adding layers can compensate
+for this.
 
 Deep generative models have been gaining a lot of traction recently,
 particularly as people try to tackle problems where there isn't an
@@ -101,17 +101,17 @@ Mail article there is a very high probability that X=cancer.
 
 The model they used seemed quite novel to me, combining a
 bidirectional Long Short Term Memory (LSTM) recurrent neural network
-with an attention mechanism that is effective at extracting the
-relevant words from a large document. A single-layer bidirectional
-LSTM is used to compute a vector for the query, \\( v_Q \\), and to
-compute a vector for each word in the document. The so-called
-attention mechanism is used to assign a weight to each word in the
-document based on its relevance to the query, which are then used to
-construct a vector representation for the document, \\( v_D \\), as a
-weighted sum of word vectors. Finally, \\( v_D \\) and \\( v_Q \\) are
-used to compute the answer to the query. Even though it only has a
-single layer, this model is able to outperform a deep LSTM, suggesting
-that determining the relevant words in a document (via the attention
+with an attention mechanism that is effective at identifying the
+relevant words in a large document. A single-layer bidirectional LSTM
+is used to compute a vector for the query, \\( v_Q \\), and to compute
+a vector for each word in the document. The so-called attention
+mechanism is used to assign a weight to each word in the document
+based on its relevance to the query, which are then used to construct
+a vector representation for the document, \\( v_D \\), as a weighted
+sum of word vectors. Finally, \\( v_D \\) and \\( v_Q \\) are used to
+compute the answer to the query. Even though it only has a single
+layer, this model is able to outperform a deep LSTM, suggesting that
+determining the relevant words in a document (via the attention
 mechanism) could be more important than constructing higher-level
 features. There has been a lot of recent work on the problem of
 computing a feature vector for a document *D* that can be used to
@@ -246,11 +246,11 @@ finite set of examples. In contrast, a LSTM struggles to handle
 sequences that are longer than those that were seen during
 training.
 
-This model feels a bit complicated right now and there are an
-increasing number of papers appearing that try to develop simpler ways
-to equip a neural network with an external memory. I don't think these
-models are truly practical yet but it's certainly one of the more
-interesting and ambitious lines of research in machine learning and
-one worth keeping up with. Paper <a
-href="http://arxiv.org/abs/1410.5401">here</a> (see also <a
-href="http://arxiv.org/abs/1506.02516">Grefenstette et al.</a>)
+This model feels a bit complicated right now and several other groups
+of researchers have tried to develop simpler ways to equip a neural
+network with an external memory. I don't know if models are truly
+practical yet but it's certainly one of the more interesting and
+ambitious lines of research in machine learning and one worth keeping
+up with. Paper <a href="http://arxiv.org/abs/1410.5401">here</a> (see
+also <a href="http://arxiv.org/abs/1506.02516">Grefenstette et
+al.</a>)
