@@ -2,7 +2,7 @@
 
 title:            PC
 locale:           en_GB
-url:              
+url:              http://paidi.github.io
 
 
 # Jekyll configuration
@@ -29,15 +29,15 @@ owner:
   name: P&aacute;id&iacute; Creed
   avatar: paidi.jpg
   bio: "Engineer, mathematician, scientist, vegan."
-  email: 
+  email:
   disqus-shortname: paidicreed
   twitter: paidicreed
   google:
     plus: #paidicreed
-    analytics: 
-    verify: 
-    ad-client: 
-    ad-slot: 
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
   bing-verify: #
   github: paidi
   stackoverflow: #http://stackoverflow.com/users/123456/username
