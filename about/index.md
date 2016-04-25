@@ -21,7 +21,9 @@ knowledge bases for inference, weak supervision, the application of
 Deep Learning to Natural Language Understanding, and writing
 Lua/C/CUDA code with [Torch7](http://torch.ch)
 
-After a (brief) career as a Theoretical Computer Science researcher, I
+After a (brief) career as a Theoretical Computer Science researcher
+([here](http://www.lfcs.inf.ed.ac.uk/research/complexity/) and
+[here](https://www.cs.ox.ac.uk/activities/constraints/home.html)), I
 spent 3 great years writing C++ and Clojure, and thinking about
 language models and efficient algorithms and data structures, on the
 SDK Team at [SwiftKey](http://www.swiftkey.com). Since March 2015,
