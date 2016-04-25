@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java Generics vs C++ Templates"
-excerpt: "The differences between Java Generics and C++ Templates"
+excerpt: "Musing on the difference between Java Generics and C++ Templates"
 tags: [machine learning, academic]
 comments: true
 published: true
