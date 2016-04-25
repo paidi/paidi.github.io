@@ -2,14 +2,13 @@
 
 title:            PC
 locale:           en_GB
-url:              http://paidi.github.io
-
+baseurl:          ""
 
 # Jekyll configuration
 
 permalink:   /:categories/:title/
-markdown:    kramdown
-highlighter: pygments
+markdown:    redcarpet
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
