@@ -47,7 +47,7 @@ static void f(T t) {
 int main() {
   B b = B();
   C c = C();
-  
+
   f(b);
   f(c);
 }
@@ -74,7 +74,7 @@ class Test {
     public static void main(String[] args) {
         B b = new B();
         C c = new C();
-        
+
         f(b);
         f(c);
     }
@@ -139,7 +139,7 @@ compile-time checks that ensure every object in ```l``` is of type
 
 class MathFunctions {
     public static <T extends Comparable<? super T>> T max(T obj1, T obj2) {
-        return obj1.compareTo(obj2) <= 0 ? obj2 : obj1; 
+        return obj1.compareTo(obj2) <= 0 ? obj2 : obj1;
     }
 }
 ```
@@ -166,9 +166,8 @@ template <class T> const T& max(const T& a, const T& b) {
 
 # So, what's the difference?
 
-The key difference between Java Generics and C++ Templates, as far as
-I can tell, is how the parameterisation of the different types happens
-at run-time.
+The key difference between Java Generics and C++ Templates is how the
+parameterisation of the different types is treated by the compiler.
 
 In C++, the compiler generates separate machine code for every type a
 template function is defined for, e.g., the following code will result
@@ -190,7 +189,7 @@ Java documentation type erasure is achieved by the following:
 - Insert type casts if necessary to preserve type safety.
 - Generate bridge methods to preserve polymorphism in extended generic
   types.
-            
+
 This means that the implementation of a generic max function given
 above would be equivalent to
 
@@ -198,7 +197,7 @@ above would be equivalent to
 
 class MathFunctions {
     public static Comparable max(Comparable obj1, Comparable obj2) {
-        return obj1.compareTo(obj2) <= 0 ? obj2 : obj1; 
+        return obj1.compareTo(obj2) <= 0 ? obj2 : obj1;
     }
 
     public static Float max(Float f1, Float f2) {
@@ -208,7 +207,7 @@ class MathFunctions {
     public static Integer max(Integer n1, Integer n2) {
         return (Integer) max(f1,f2);
     }
-    
+
     ...
 }
 
