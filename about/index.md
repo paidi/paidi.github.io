@@ -11,15 +11,16 @@ image:
 Machine Learning Engineer and Researcher. I like good old fashioned
 data structures and algorithms, algorithms for approximating hard
 counting problems or sampling from intractable probability
-distributions, C++, Lua, functional programming, software
-architecture, representation learning (and algorithms for solving the
-hard non-convex optimisation problems this entails), Bayesian machine
-learning, statistical language modelling and extracting information
-from unstructured data, e.g. text. At the moment, I am particularly
-interested in automated knowledge base construction, building
-knowledge bases for inference, weak supervision, the application of
-Deep Learning to Natural Language Understanding, and writing
-Lua/C/CUDA code with [Torch7](http://torch.ch)
+distributions, C++, Lua, Python, Bash, Clojure, Emacs, functional
+programming, software architecture, representation learning, Bayesian
+machine learning, statistical language modelling and extracting
+information from unstructured data, e.g. text. At the moment, I am
+particularly interested in automated knowledge base construction,
+building knowledge bases for inference, weak supervision, the
+application of Deep Learning to Natural Language Understanding, and
+writing Lua/C/CUDA code with [Torch7](http://torch.ch). I have been
+slowly converted to Agile development, and am now an enthusiastic
+supporter of using it in both engineering and research projects.
 
 After a (brief) career as a Theoretical Computer Science researcher
 ([here](http://www.lfcs.inf.ed.ac.uk/research/complexity/) and
