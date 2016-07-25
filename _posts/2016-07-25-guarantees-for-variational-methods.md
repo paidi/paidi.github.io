@@ -119,8 +119,8 @@ rounds the pseudo-distribution defined by the optimal solution $$
 \mu^{\star} \in SA(k) $$ to obtain a proper distribution $$ \bar{\mu}
 $$, which gives a lower bound on $$ \log \mathcal{Z} $$. Under certain
 density conditions on $$ J $$, this rounding does not change the
-objective value too much, giving an additive approximation for $$ \log
-\mathcal Z $$.
+objective value too much, and the upper and lower bounds are tight
+enough to give an additive approximation for $$ \log \mathcal Z $$.
 
 These are the very first results with a new proof technique that looks
 to be reasonably general and will hopefully open the door for many
